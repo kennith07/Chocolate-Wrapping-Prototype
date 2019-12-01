@@ -1,0 +1,89 @@
+void setup() {
+  Serial.begin(9600);
+//IR SENSOR pins
+pinMode(8,INPUT);
+
+pinMode(9,OUTPUT);           //conveyor
+pinMode(10,OUTPUT);   //MOTOR pins
+pinMode(11,OUTPUT);           //wrapper
+pinMode(12,OUTPUT);
+pinMode(2,OUTPUT);            //L sealer
+pinMode(3,OUTPUT);
+
+pinMode(51,OUTPUT);            //BUZZER PIN
+
+pinMode(52,OUTPUT);             //LED pins
+pinMode(53,OUTPUT);             // put your setup code here, to run once:
+
+}
+
+void loop() {
+  Serial.available();{
+    digitalWrite(9,HIGH);
+    digitalWrite(10,HIGH);
+    digitalWrite(11,HIGH);
+    digitalWrite(12,HIGH);
+    digitalWrite(2,HIGH);
+    digitalWrite(3,HIGH);
+    
+if(digitalRead(8)==0)
+{
+  {digitalWrite(9,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(11,LOW);
+  digitalWrite(12,HIGH);}
+  delay(5000);
+  
+  
+  digitalWrite(9,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(12,HIGH);
+  
+
+
+  {digitalWrite(6,LOW);
+   digitalWrite(7,HIGH);}
+    delay(500);
+
+   {digitalWrite(6,HIGH);
+    digitalWrite(7,HIGH);}
+    delay(4000);
+
+   {digitalWrite(6,HIGH);
+    digitalWrite(7,LOW);}
+    delay(500);
+
+    {digitalWrite(6,HIGH);
+    digitalWrite(7,HIGH);}
+
+ {digitalWrite(9,HIGH);
+  digitalWrite(10,LOW);
+  digitalWrite(11,LOW);
+  digitalWrite(12,HIGH);}
+  delay(2000);
+
+  {digitalWrite(9,HIGH);
+  digitalWrite(10,HIGH);
+  digitalWrite(11,HIGH);
+  digitalWrite(12,HIGH);}
+
+   {digitalWrite(2,LOW);
+   digitalWrite(3,HIGH);}
+    delay(500);
+
+   {digitalWrite(2,HIGH);
+    digitalWrite(3,HIGH);}
+    delay(2000);
+
+   {digitalWrite(2,HIGH);
+    digitalWrite(3,LOW);}
+    delay(500);
+
+     {digitalWrite(2,HIGH);
+    digitalWrite(3,HIGH);}
+  
+  
+}
+  }
+}
